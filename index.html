@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web app libri - firebase: firestore</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>bd3-nosql-atv5</h1>
+    <div class="content">
+      <form id="add-book-form">
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Nome do aluno"
+          required
+        />
+        <input
+          type="date"
+          name="data_nascimento"
+          id="data_nascimento"
+          required
+        />
+        <input
+          type="text"
+          name="cpf"
+          id="cpf"
+          placeholder="CPF do aluno"
+          required
+        />
+        <input
+          type="text"
+          name="rg"
+          id="rg"
+          placeholder="RG do aluno"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email do aluno"
+          required
+        />
+        <input
+          type="text"
+          name="telefone_aluno"
+          id="telefone_aluno"
+          placeholder="Telefone do aluno"
+          required
+        />
+        <input
+          type="text"
+          name="telefone_responsavel"
+          id="telefone_responsavel"
+          placeholder="Telefone do responsavel"
+          required
+        />
+
+        <button>Cadastrar</button>
+      </form>
+      <ul id="book-list"></ul>
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBPsR398Aa9WaQt3eN5Iietx7ZWKbTjIdU",
+      authDomain: "app-libri-gustavo.firebaseapp.com",
+      projectId: "app-libri-gustavo",
+      storageBucket: "app-libri-gustavo.appspot.com",
+      messagingSenderId: "867392914188",
+      appId: "1:867392914188:web:c260ab80e5fdcb2864ff29",
+      measurementId: "G-NGX9N5WM52",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+
+    console.log(db);
+  </script>
+  <script src="./app.js"></script>
+</html>
